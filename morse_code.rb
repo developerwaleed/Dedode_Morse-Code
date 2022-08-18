@@ -1,6 +1,7 @@
 def decode_char(char)
-  invalid = true;
-  decoded_message = ""
+  invalid = true
+  decoded_message = ''
+
   morse_dict = {
     'A' => '.-', 'B' => '-...', 'C' => '-.-.', 'D' => '-..', 'E' => '.',
     'F' => '..-.', 'G' => '--.', 'H' => '....',
@@ -12,22 +13,21 @@ def decode_char(char)
   }
 
   str = char.split(/ /)
+  
   str.each do |item|
     if morse_dict.key(item)
-      decoded_message = decoded_message + morse_dict.key(item)
-    elsif item == ""
-      decoded_message = decoded_message + " "
+      decoded_message += morse_dict.key(item)
+    elsif item == ''
+      decoded_message += ' '
 
     else
-      invalid = false;
+      invalid = false
     end
   end
-
   if invalid
-    print decoded_message.squeeze(" ")
+    print decoded_message.squeeze(' ')
   else
-    print "Invalid String!"
+    print 'Invalid String!'
   end
 end
-
-decode_char(" .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+decode_char(' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
