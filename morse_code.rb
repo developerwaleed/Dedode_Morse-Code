@@ -13,7 +13,7 @@ def decode_char(char)
   }
 
   str = char.split(/ /)
-  
+
   str.each do |item|
     if morse_dict.key(item)
       decoded_message += morse_dict.key(item)
