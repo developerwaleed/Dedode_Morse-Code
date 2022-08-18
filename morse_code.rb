@@ -22,6 +22,13 @@ decoded_message = ""
             invalid = false;
       end
     end      
+
+    if invalid
+      print decoded_message.squeeze(" ")
+  else 
+      print "Invalid String!"
+end
+
 end
 
 decode_char(" .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
